@@ -54,7 +54,7 @@ module.exports = function(file, options) {
 
     isJSXFile = true;
   } else {
-    var extensions = ['js', 'jsx']
+    var extensions = ((options.extension || options.x) ? [] : ['js', 'jsx'])
       .concat(options.extension)
       .concat(options.x)
       .filter(Boolean)
